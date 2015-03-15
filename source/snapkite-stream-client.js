@@ -1,4 +1,4 @@
-var streamConfig = {
+var config = {
   hostname: 'localhost',
   port: 3000,
   delayInMilliseconds: 1500,
@@ -19,7 +19,7 @@ function loadImage(url, callback) {
 
 function TweetsQueue() {
   var tweets = [];
-  var MAXIMUM_NUMBER_OF_TWEETS = streamConfig.cacheNumberOfTweets;
+  var MAXIMUM_NUMBER_OF_TWEETS = config.cacheNumberOfTweets;
 
   this.enqueue = function (tweet) {
     if (this.getSize() < MAXIMUM_NUMBER_OF_TWEETS) {
@@ -40,23 +40,23 @@ function TweetsQueue() {
   };
 }
 
-function initialiseStream(handleNewTweet, config) {
+function initialiseStream(handleNewTweet, streamConfig) {
 
-  if (typeof config !== 'undefined') {
-    if (typeof config.hostname !== 'undefined') {
-      streamConfig.hostname = config.hostname;
+  if (typeof streamConfig !== 'undefined') {
+    if (typeof streamConfig.hostname !== 'undefined') {
+      config.hostname = streamConfig.hostname;
     }
 
-    if (typeof config.port !== 'undefined') {
-      streamConfig.port = config.port;
+    if (typeof streamConfig.port !== 'undefined') {
+      config.port = streamConfig.port;
     }
 
-    if (typeof config.delayInMilliseconds !== 'undefined') {
-      streamConfig.delayInMilliseconds = config.delayInMilliseconds;
+    if (typeof streamConfig.delayInMilliseconds !== 'undefined') {
+      config.delayInMilliseconds = streamConfig.delayInMilliseconds;
     }
 
-    if (typeof config.cacheNumberOfTweets !== 'undefined') {
-      streamConfig.cacheNumberOfTweets = config.cacheNumberOfTweets;
+    if (typeof streamConfig.cacheNumberOfTweets !== 'undefined') {
+      config.cacheNumberOfTweets = streamConfig.cacheNumberOfTweets;
     }
   }
 
