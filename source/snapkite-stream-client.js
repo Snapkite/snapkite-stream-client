@@ -6,6 +6,7 @@ var config = {
 };
 
 var socket;
+var tweetsQueue;
 
 function loadImage(url, callback) {
   var image = new Image();
@@ -63,7 +64,7 @@ function initialiseStream(handleNewTweet, streamConfig) {
   }
 
   socket = require('socket.io-client')('http://' + config.hostname + ':' + config.port);
-  var tweetsQueue = new TweetsQueue();
+  tweetsQueue = new TweetsQueue();
 
   socket.on('connect', function () {
     console.log('[Snapkite Stream Client] Socket connected');
@@ -78,6 +79,10 @@ function initialiseStream(handleNewTweet, streamConfig) {
   });
 
   window.setInterval(function () {
+    if (! tweetsQueue) {
+      return;
+    }
+
     var tweet = tweetsQueue.dequeue();
 
     if (tweet) {
@@ -89,6 +94,7 @@ function initialiseStream(handleNewTweet, streamConfig) {
 
 function destroyStream() {
   socket.disconnect();
+  tweetsQueue = null;
 }
 
 module.exports = {
