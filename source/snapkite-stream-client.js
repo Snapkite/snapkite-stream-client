@@ -5,6 +5,8 @@ var config = {
   cacheNumberOfTweets: 20
 };
 
+var socket;
+
 function loadImage(url, callback) {
   var image = new Image();
 
@@ -60,7 +62,7 @@ function initialiseStream(handleNewTweet, streamConfig) {
     }
   }
 
-  var socket = require('socket.io-client')('http://' + config.hostname + ':' + config.port);
+  socket = require('socket.io-client')('http://' + config.hostname + ':' + config.port);
   var tweetsQueue = new TweetsQueue();
 
   socket.on('connect', function () {
@@ -85,6 +87,11 @@ function initialiseStream(handleNewTweet, streamConfig) {
   }, config.delayInMilliseconds);
 }
 
+function destroyStream() {
+  socket.disconnect();
+}
+
 module.exports = {
-  initialiseStream: initialiseStream
+  initialiseStream: initialiseStream,
+  destroyStream: destroyStream
 };
