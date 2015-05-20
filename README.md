@@ -8,7 +8,7 @@ This helper library handles stream of tweets sent using Socket.IO by [Snapkite E
 var SnapkiteStreamClient = require('../snapkite-stream-client');
 ```
 
-## `initialiseStream()`
+### `initialiseStream()`
 
 Connects to [Snapkite Engine](https://github.com/snapkite/snapkite-engine) and invokes callback function on receiving new tweet:
 
@@ -24,7 +24,7 @@ function callback(tweet) {
 }
 ```
 
-### `options` object:
+#### `options` object:
 
 + `hostname`
 
@@ -46,7 +46,7 @@ If you set a delay between receiving new tweets, you might want to cache them. T
 
 Default: `20`
 
-## `destroyStream()`
+### `destroyStream()`
 
 Disconnect from [Snapkite Engine](https://github.com/snapkite/snapkite-engine).
 
