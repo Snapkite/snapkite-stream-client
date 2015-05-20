@@ -28,23 +28,23 @@ function callback(tweet) {
 
 + `hostname`
 
-Default: `localhost`.
+  Default: `localhost`.
 
 + `port`
 
-Default: `3000`.
+  Default: `3000`.
 
 + `delayInMilliseconds`
 
-Tweets can arrive at a very fast pace, so to prevent that you can set the minimum delay between tweets. Delay is set in milliseconds.
+  Tweets can arrive at a very fast pace, so to prevent that you can set the minimum delay between tweets. Delay is set in milliseconds.
 
-Default: `1500`
+  Default: `1500`
 
 + `cacheNumberOfTweets`
 
-If you set a delay between receiving new tweets, you might want to cache them. Tweets that are not cached will be dropped.
+  If you set a delay between receiving new tweets, you might want to cache them. Tweets that are not cached will be dropped.
 
-Default: `20`
+  Default: `20`
 
 ### `destroyStream()`
 
