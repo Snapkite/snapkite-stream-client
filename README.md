@@ -26,6 +26,15 @@ function callback(tweet) {
 
 #### `options` object:
 
+```js
+{
+  hostname: 'localhost',
+  port: 3000,
+  delayInMilliseconds: 1500,
+  cacheNumberOfTweets: 20
+}
+```
+
 + `hostname`
 
   Default: `localhost`.
