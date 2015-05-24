@@ -1,4 +1,4 @@
-# Snapkite Engine Stream Client
+# Snapkite Stream Client
 
 This helper library handles stream of tweets sent using Socket.IO by [Snapkite Engine](https://github.com/snapkite/snapkite-engine).
 
