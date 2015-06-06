@@ -14,12 +14,12 @@ npm install --save snapkite-stream-client
 var SnapkiteStreamClient = require('snapkite-stream-client');
 ```
 
-### `initialiseStream()`
+### `initializeStream()` or `initialiseStream()`
 
 Connects to [Snapkite Engine](https://github.com/snapkite/snapkite-engine) and invokes callback function on receiving new tweet:
 
 ```js
-SnapkiteStreamClient.initialiseStream(callback, options);
+SnapkiteStreamClient.initializeStream(callback, options);
 ```
 
 Callback function should handle tweet object:
