@@ -2,6 +2,12 @@
 
 This helper library handles stream of tweets sent using Socket.IO by [Snapkite Engine](https://github.com/snapkite/snapkite-engine).
 
+## Install
+
+```js
+npm install --save snapkite-stream-client
+```
+
 ## API
 
 ```js
