@@ -5,7 +5,7 @@ This helper library handles stream of tweets sent using Socket.IO by [Snapkite E
 ## API
 
 ```js
-var SnapkiteStreamClient = require('../snapkite-stream-client');
+var SnapkiteStreamClient = require('snapkite-stream-client');
 ```
 
 ### `initialiseStream()`
