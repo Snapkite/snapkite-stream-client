@@ -99,5 +99,6 @@ function destroyStream() {
 
 module.exports = {
   initializeStream: initializeStream,
+  initialiseStream: initializeStream,
   destroyStream: destroyStream
 };
