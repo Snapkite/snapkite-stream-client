@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/snapkite/snapkite-stream-client/issues"
   },
-  "homepage": "https://github.com/snapkite/snapkite-stream-client"
+  "homepage": "https://github.com/snapkite/snapkite-stream-client",
+  "dependencies": {
+    "socket.io-client": "^1.3.5"
+  }
 }
