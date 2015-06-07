@@ -43,7 +43,7 @@ function TweetsQueue() {
   };
 }
 
-function initialiseStream(handleNewTweet, streamConfig) {
+function initializeStream(handleNewTweet, streamConfig) {
 
   if (typeof streamConfig !== 'undefined') {
     if (typeof streamConfig.hostname !== 'undefined') {
@@ -98,6 +98,7 @@ function destroyStream() {
 }
 
 module.exports = {
-  initialiseStream: initialiseStream,
+  initializeStream: initializeStream,
+  initialiseStream: initializeStream,
   destroyStream: destroyStream
 };
